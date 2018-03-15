@@ -4,4 +4,25 @@
 	<groupId>hu.miskolc.uni.iit</groupId>
 	<artifactId>the-sheep-of-the-wizard</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
+	<name>The Sheep Of The Wizard</name>
+
+	<dependencies>
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>4.12</version>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.hamcrest</groupId>
+			<artifactId>hamcrest-core</artifactId>
+			<version>1.3</version>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.projectlombok</groupId>
+			<artifactId>lombok</artifactId>
+			<version>1.16.20</version>
+		</dependency>
+	</dependencies>
 </project>
