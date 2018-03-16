@@ -32,8 +32,6 @@ public class PointReader {
 			for (int i = 0; i < numberOfPoints; i++) {
 				points.add(new Point(scanner.nextInt(), scanner.nextInt()));
 			}
-		} catch (FileNotFoundException e) {
-			throw e;
 		}
 
 		return points;

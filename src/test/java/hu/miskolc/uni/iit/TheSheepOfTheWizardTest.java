@@ -11,7 +11,8 @@ import hu.miskolc.uni.iit.util.PointReaderTest;
 @SuiteClasses({
 	PointTest.class,
 	PointReaderTest.class,
-	GrahamScanTest.class
+	GrahamScanTest.class,
+	PointFinderTest.class
 })
 public class TheSheepOfTheWizardTest {
 
