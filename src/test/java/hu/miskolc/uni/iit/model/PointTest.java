@@ -5,8 +5,18 @@ import static org.hamcrest.CoreMatchers.is;
 import static org.hamcrest.CoreMatchers.not;
 import static org.junit.Assert.assertThat;
 
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.List;
+
 import org.junit.Test;
 
+import hu.miskolc.uni.iit.model.Point.PolarAngleComparator;
+
+/**
+ * @author Alex Toth
+ *
+ */
 public class PointTest {
 
 	@Test
@@ -118,6 +128,31 @@ public class PointTest {
 		Point point = new Point(7L, 1L);
 
 		assertThat(point.toString(), is(equalTo("7 1")));
+	}
+
+	@Test
+	public void testPolarAngleComparator() {
+		Point point1 = new Point(0, 0);
+		Point point2 = new Point(1, 1);
+		Point point3 = new Point(10, 0);
+
+		List<Point> points = Arrays.asList(point1, point2, point3, point2);
+
+		Point lowestPoint = Collections.min(points);
+
+		PolarAngleComparator polarAngleComparator = new PolarAngleComparator(lowestPoint);
+
+		Collections.sort(points, polarAngleComparator);
+
+		assertThat(points.get(0), is(equalTo(point1)));
+		assertThat(points.get(1), is(equalTo(point3)));
+		assertThat(points.get(2), is(equalTo(point2)));
+		assertThat(points.get(3), is(equalTo(point2)));
+	}
+
+	@Test(expected = NullPointerException.class)
+	public void testPolarAngleComparatorWithNullLowestPoint() {
+		new PolarAngleComparator(null);
 	}
 
 }

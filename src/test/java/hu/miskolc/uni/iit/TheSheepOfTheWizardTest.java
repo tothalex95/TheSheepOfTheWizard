@@ -10,7 +10,8 @@ import hu.miskolc.uni.iit.util.PointReaderTest;
 @RunWith(Suite.class)
 @SuiteClasses({
 	PointTest.class,
-	PointReaderTest.class
+	PointReaderTest.class,
+	GrahamScanTest.class
 })
 public class TheSheepOfTheWizardTest {
 

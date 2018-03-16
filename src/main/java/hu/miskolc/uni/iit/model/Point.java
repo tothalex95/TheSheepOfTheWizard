@@ -3,9 +3,12 @@
  */
 package hu.miskolc.uni.iit.model;
 
+import java.util.Comparator;
+
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
+import lombok.NonNull;
 
 /**
  * @author Alex Toth
@@ -60,6 +63,41 @@ public class Point implements Comparable<Point> {
 	@Override
 	public String toString() {
 		return String.format("%d %d", x, y);
+	}
+
+	@AllArgsConstructor
+	public static final class PolarAngleComparator implements Comparator<Point> {
+
+		@NonNull
+		private Point lowestPoint;
+
+		@Override
+		public int compare(Point point1, Point point2) {
+			if (point1.equals(point2)) {
+				return 0;
+			}
+
+			double theta1 = Math.atan2(point1.y - lowestPoint.y, point1.x - lowestPoint.x);
+			double theta2 = Math.atan2(point2.y - lowestPoint.y, point2.x - lowestPoint.x);
+
+			if (theta1 < theta2) {
+				return -1;
+			} else if (theta1 > theta2) {
+				return 1;
+			} else {
+				double distance1 = Math.sqrt(((lowestPoint.x - point1.x) * (lowestPoint.x - point1.x))
+						+ ((lowestPoint.y - point1.y) * (lowestPoint.y - point1.y)));
+				double distance2 = Math.sqrt(((lowestPoint.x - point2.x) * (lowestPoint.x - point2.x))
+						+ ((lowestPoint.y - point2.y) * (lowestPoint.y - point2.y)));
+
+				if (distance1 < distance2) {
+					return -1;
+				} else {
+					return 1;
+				}
+			}
+		}
+
 	}
 
 }
