@@ -17,7 +17,7 @@ public class TheSheepOfTheWizard {
 
 	public static void main(String[] args) {
 
-		String pathname = args.length < 1 ? "src/main/resources/A10.in" : args[0];
+		String pathname = args.length < 1 ? "src/main/resources/A1.in" : args[0];
 
 		List<Point> points = null;
 

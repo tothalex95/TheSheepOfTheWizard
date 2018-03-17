@@ -15,6 +15,11 @@ import hu.miskolc.uni.iit.model.Point;
  */
 public class PointFinder {
 
+	/**
+	 * @param convexHull
+	 * @return
+	 * @see Point
+	 */
 	public Point findBestPoint(List<Point> convexHull) {
 		List<Double> angles = new ArrayList<>();
 
@@ -35,6 +40,12 @@ public class PointFinder {
 		return bestPoint;
 	}
 
+	/**
+	 * @param point1
+	 * @param point2
+	 * @param point3
+	 * @return
+	 */
 	private double getAngle(Point point1, Point point2, Point point3) {
 		Point ab = new Point(point2.getX() - point1.getX(), point2.getY() - point1.getY());
 		Point ac = new Point(point3.getX() - point1.getX(), point3.getY() - point1.getY());

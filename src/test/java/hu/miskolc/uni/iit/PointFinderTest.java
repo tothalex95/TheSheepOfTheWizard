@@ -21,7 +21,7 @@ import hu.miskolc.uni.iit.model.Point;
 public class PointFinderTest {
 
 	@Test
-	public void testFind() {
+	public void testFindBestPoint() {
 		Point point1 = new Point(0, 0);
 		Point point2 = new Point(1, 1);
 		Point point3 = new Point(10, 0);

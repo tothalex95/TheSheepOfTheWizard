@@ -17,6 +17,12 @@ import hu.miskolc.uni.iit.model.Point.PolarAngleComparator;
  */
 public class GrahamScan {
 
+	/**
+	 * Returns the convex hull for a point list.
+	 * 
+	 * @param pointList	The list of points to get a convex hull from.
+	 * @return			The convex hull represented by a list of points.
+	 */
 	public List<Point> getConvexHull(List<Point> pointList) {
 		if (pointList.size() < 3) {
 			throw new IllegalArgumentException("Cannot create convex hull from less than 3 points!");
@@ -58,14 +64,35 @@ public class GrahamScan {
 		return new ArrayList<>(stack);
 	}
 
+	/**
+	 * Returns true if all points in the list are collinear (cross product is 0).
+	 * 
+	 * @param points	The list of points to check whether they're all collinear or not.
+	 * @return			Whether the points are all collinear or not.
+	 */
 	private boolean areAllCollinear(List<Point> points) {
 		Point point1 = points.get(0);
 		Point point2 = points.get(1);
 
-		return points.subList(2, points.size()).stream().filter(point3 -> crossProduct(point1, point2, point3) != 0l)
+		return points.subList(2, points.size())
+				.stream()
+				.filter(point3 -> crossProduct(point1, point2, point3) != 0l)
 				.count() == 0l;
 	}
 
+	/**
+	 * Calculates the cross product between 3 points (vectors) as:
+	 * (b.x-a.x * c.y-a.y) - (b.y-a.y * c.x-a.x)
+	 * 
+	 * If the cross product if less than 0, then it's a clockwise turn,
+	 * if it's greater than 0, then it's a counter clockwise turn,
+	 * else the points are collinear.
+	 * 
+	 * @param point1	The starting point.
+	 * @param point2	The second point.
+	 * @param point3	The end point.
+	 * @return			The cross product between 3 points.
+	 */
 	private long crossProduct(Point point1, Point point2, Point point3) {
 		return (point2.getX() - point1.getX()) * (point3.getY() - point1.getY())
 				- (point2.getY() - point1.getY()) * (point3.getX() - point1.getX());

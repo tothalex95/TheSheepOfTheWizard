@@ -22,6 +22,10 @@ public class Point implements Comparable<Point> {
 	private final long x;
 	private final long y;
 
+	/**
+	 * @param point
+	 * @return
+	 */
 	public double distance(Point point) {
 		return Math.sqrt(Math.pow(point.x - this.x, 2) + Math.pow(point.y - this.y, 2));
 	}
