@@ -19,8 +19,8 @@ public class PointReader {
 
 	
 	/**
-	 * @param path is where the file containing points coordinates is located.
-	 * @return the list of points from the file.
+	 * @param path	 The path to the file containing points coordinates.
+	 * @return	The list of points from the file.
 	 * @throws FileNotFoundException
 	 */
 	public List<Point> readPointsFromFile(String path) throws FileNotFoundException {

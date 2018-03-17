@@ -23,8 +23,11 @@ public class Point implements Comparable<Point> {
 	private final long y;
 
 	/**
-	 * @param point
-	 * @return
+	 * Returns the distance of the actual and the parameter point.
+	 * Actually, it is the length of the vector created from the 2 points.
+	 * 
+	 * @param point	The point from which the distance must be calculated.
+	 * @return	The distance of the 2 points.
 	 */
 	public double distance(Point point) {
 		return Math.sqrt(Math.pow(point.x - this.x, 2) + Math.pow(point.y - this.y, 2));
@@ -32,10 +35,12 @@ public class Point implements Comparable<Point> {
 
 	@Override
 	public int compareTo(Point o) {
-		if (this.y > o.y)
+		if (this.y > o.y) {
 			return 1;
-		if (this.y < o.y)
+		}
+		if (this.y < o.y) {
 			return -1;
+		}
 		return (int) Math.signum(this.x - o.x);
 	}
 

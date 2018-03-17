@@ -16,8 +16,11 @@ import hu.miskolc.uni.iit.model.Point;
 public class PointFinder {
 
 	/**
-	 * @param convexHull
-	 * @return
+	 * Finds the point from which the rest of the convex hull is seen in the
+	 * smallest angle.
+	 * 
+	 * @param convexHull	The convex hull represented by a list of points.
+	 * @return	The point from which the rest is seen in the smallest angle.
 	 * @see Point
 	 */
 	public Point findBestPoint(List<Point> convexHull) {
@@ -41,14 +44,16 @@ public class PointFinder {
 	}
 
 	/**
-	 * @param point1
-	 * @param point2
-	 * @param point3
-	 * @return
+	 * Returns the included angle of the ab and ac vectors in degrees.
+	 * 
+	 * @param a	The starting point of the vectors.
+	 * @param b	The end point of the ab vector.
+	 * @param c	The end point of the ac vector.
+	 * @return	The included angle of the ab and ac vectors.
 	 */
-	private double getAngle(Point point1, Point point2, Point point3) {
-		Point ab = new Point(point2.getX() - point1.getX(), point2.getY() - point1.getY());
-		Point ac = new Point(point3.getX() - point1.getX(), point3.getY() - point1.getY());
+	private double getAngle(Point a, Point b, Point c) {
+		Point ab = new Point(b.getX() - a.getX(), b.getY() - a.getY());
+		Point ac = new Point(c.getX() - a.getX(), c.getY() - a.getY());
 
 		double abLength = ab.distance(new Point(0, 0));
 		double acLength = ac.distance(new Point(0, 0));
