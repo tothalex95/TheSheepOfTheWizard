@@ -1,6 +1,3 @@
-/**
- * 
- */
 package hu.miskolc.uni.iit;
 
 import java.io.FileNotFoundException;

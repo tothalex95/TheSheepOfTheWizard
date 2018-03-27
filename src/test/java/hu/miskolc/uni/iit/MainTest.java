@@ -14,8 +14,8 @@ public class MainTest {
 	}
 
 	@Test
-	public void testMainWithUnexistentFile() {
-		TheSheepOfTheWizard.main(new String[] { "unexistentFile" });
+	public void testMainWithNonExistingFile() {
+		TheSheepOfTheWizard.main(new String[] { "nonExistingFile" });
 	}
 
 	@Test

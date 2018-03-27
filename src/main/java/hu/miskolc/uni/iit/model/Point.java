@@ -1,6 +1,3 @@
-/**
- * 
- */
 package hu.miskolc.uni.iit.model;
 
 import java.util.Comparator;

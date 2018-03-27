@@ -1,6 +1,3 @@
-/**
- * 
- */
 package hu.miskolc.uni.iit;
 
 import static org.hamcrest.CoreMatchers.equalTo;
