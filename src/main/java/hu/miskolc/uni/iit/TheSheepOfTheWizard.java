@@ -27,7 +27,7 @@ public class TheSheepOfTheWizard {
 			points = pointReader.readPointsFromFile(pathname);
 		} catch (FileNotFoundException e) {
 			System.err.println(e.getMessage());
-			System.exit(1);
+			return;
 		}
 
 		GrahamScan grahamScan = new GrahamScan();

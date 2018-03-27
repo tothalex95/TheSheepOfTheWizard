@@ -8,12 +8,7 @@ import hu.miskolc.uni.iit.model.PointTest;
 import hu.miskolc.uni.iit.util.PointReaderTest;
 
 @RunWith(Suite.class)
-@SuiteClasses({
-	PointTest.class,
-	PointReaderTest.class,
-	GrahamScanTest.class,
-	PointFinderTest.class
-})
+@SuiteClasses({ PointTest.class, PointReaderTest.class, GrahamScanTest.class, PointFinderTest.class, MainTest.class })
 public class TheSheepOfTheWizardTest {
 
 }
