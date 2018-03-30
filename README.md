@@ -1,4 +1,5 @@
 [![Build Status](https://travis-ci.org/tothalex95/TheSheepOfTheWizard.svg?branch=master)](https://travis-ci.org/tothalex95/TheSheepOfTheWizard)
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/3c499408090e4e548fb9d3cbd556e499)](https://www.codacy.com/app/tothalex95/TheSheepOfTheWizard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=tothalex95/TheSheepOfTheWizard&amp;utm_campaign=Badge_Grade)
 
 # The Sheep Of The Wizard
 
