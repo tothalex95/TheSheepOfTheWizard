@@ -1,11 +1,13 @@
 package hu.miskolc.uni.iit;
 
+import org.junit.Ignore;
 import org.junit.Test;
 
 /**
  * @author Alex Toth
  *
  */
+@Ignore
 public class MainTest {
 
 	@Test
