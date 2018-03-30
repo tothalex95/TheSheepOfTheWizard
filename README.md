@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/tothalex95/TheSheepOfTheWizard.svg?branch=master)](https://travis-ci.org/tothalex95/TheSheepOfTheWizard)
+
 # The Sheep Of The Wizard
 
 Hildrath, the great wizard has a flock of sheep. These sheep
